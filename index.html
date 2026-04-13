@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Janin Lounas &amp; Sport Cafe — Tervetuloa</title>
+  <meta name="description" content="Janin Lounas ja Sport Cafe: ravintola Pirkkolassa ja sporttibaari Maunulassa. Lounas, biljardi, darts ja tilausruokailut.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body class="page-home">
+  <div class="layout">
+    <header class="site-header site-header--home">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">Janin Lounas &amp; Sport Cafe</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Avaa valikko">
+          <span class="nav-toggle__lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <nav id="primary-nav" class="nav nav--primary" aria-label="Päävalikko">
+          <a href="pirkkola.html">Pirkkola</a>
+          <a href="maunula.html">Maunula</a>
+          <a href="tilausruokailut.html">Tilausruokailut</a>
+          <a href="yhteystiedot.html">Yhteystiedot</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="home-main">
+      <section class="home-hero" aria-labelledby="home-hero-title">
+        <div class="home-hero__bg" aria-hidden="true"></div>
+        <div class="home-hero__inner">
+          <p class="home-hero__eyebrow">Helsinki · Pirkkola &amp; Maunula</p>
+          <h1 id="home-hero-title" class="home-hero__title">Lounasta, peliä ja hyvää fiilistä</h1>
+          <p class="home-hero__lead">
+            Uimahallin lounasravintola Pirkkolassa ja sporttibaari Maunulassa — sama lämmin palvelu, kaksi eri tunnelmaa.
+          </p>
+          <ul class="home-hero__chips" aria-label="Palvelut pähkinänkuoressa">
+            <li>Buffet-lounas</li>
+            <li>Biljardi &amp; darts</li>
+            <li>Ryhmäruokailut</li>
+          </ul>
+          <div class="home-hero__actions">
+            <a class="btn btn--ghost-dark" href="yhteystiedot.html">Yhteystiedot</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="home-main__inner">
+        <header class="home-pick">
+          <h2 class="home-pick__title">Valitse toimipiste</h2>
+          <p class="home-pick__subtitle">Avaa tiedot, aukioloajat ja yhteystiedot yhdellä klikkauksella.</p>
+        </header>
+
+        <div class="cards cards--home">
+          <article class="card card--home">
+            <a class="card__link" href="pirkkola.html">
+              <div class="card__image">
+                <img src="https://janinsportcafe.fi/data/uploads/logot/pirkkola.png" alt="" width="200" height="80" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Pirkkola</h3>
+                <p class="card__meta">Uimahallin ravintola: buffet-lounas, keittiöannokset, biljardi ja darts.</p>
+                <span class="card__cta">Tutustu <span class="card__cta-arrow" aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--home">
+            <a class="card__link" href="maunula.html">
+              <div class="card__image">
+                <img src="https://janinsportcafe.fi/data/uploads/logot/maunula.png" alt="" width="200" height="80" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Maunula</h3>
+                <p class="card__meta">Sporttibaari: biljardi, darts, flipperi ja pöytäpelejä.</p>
+                <span class="card__cta">Tutustu <span class="card__cta-arrow" aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--home">
+            <a class="card__link" href="tilausruokailut.html">
+              <div class="card__image">
+                <img src="https://janinsportcafe.fi/data/uploads/muut_kuvat/tilausruoka.png" alt="" width="200" height="80" loading="lazy" decoding="async">
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Tilausruokailut</h3>
+                <p class="card__meta">Joukkue- ja ryhmäruokailut Pirkkolassa — myös lounasajan jälkeen.</p>
+                <span class="card__cta">Tutustu <span class="card__cta-arrow" aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Janin Lounas &amp; Sport Cafe · Fish Corner Hyvönen Oy (Y-tunnus 1512462-0)</p>
+      <p><a href="yhteystiedot.html">Yhteystiedot</a></p>
+    </footer>
+  </div>
+</body>
+</html>

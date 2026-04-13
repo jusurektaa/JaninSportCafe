@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Maunula — Janin Sport Bar &amp; Cafe</title>
+  <meta name="description" content="Janin Sport Bar &amp; Cafe Maunula: aukioloajat, menu, biljardi, darts ja pöytäpelit. Rajametsäntie 32, Maunula.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">Janin Lounas &amp; Sport Cafe</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Avaa valikko">
+          <span class="nav-toggle__lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <nav id="primary-nav" class="nav nav--primary" aria-label="Päävalikko">
+          <a href="pirkkola.html">Pirkkola</a>
+          <a href="maunula.html" aria-current="page">Maunula</a>
+          <a href="tilausruokailut.html">Tilausruokailut</a>
+          <a href="yhteystiedot.html">Yhteystiedot</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <p class="back-row"><a href="index.html">← Etusivulle</a></p>
+
+      <h1 class="page-title">Janin Sport Bar &amp; Cafe — Maunula</h1>
+      <p class="page-intro">Maunulan sporttibaaritunnelmaa: biljardi, darts, flipperi ja useita pöytäpelejä. Ruokalista: <a href="#menu">Menu</a>.</p>
+
+      <div class="two-col">
+        <section class="section" aria-labelledby="h-aukio-m">
+          <h2 id="h-aukio-m">Aukioloajat</h2>
+          <ul class="hours-list">
+            <li><strong>Ma</strong> <span>14.00–21.00</span></li>
+            <li><strong>Ti–to</strong> <span>14.00–22.00</span></li>
+            <li><strong>Pe</strong> <span>14.00–24.00</span></li>
+            <li><strong>La</strong> <span>12.00–24.00</span></li>
+            <li><strong>Su</strong> <span>14.00–21.00</span></li>
+          </ul>
+        </section>
+
+        <section class="section" aria-labelledby="h-pelit-m">
+          <h2 id="h-pelit-m">Tarjonta</h2>
+          <ul class="plain">
+            <li>Biljardi</li>
+            <li>Darts</li>
+            <li>Flipperi</li>
+            <li>Useita pöytäpelejä</li>
+          </ul>
+          <div class="callout" style="margin-top:1.5rem;">
+            <p style="margin:0;">Seuraa meitä Facebookissa ja pysy kartalla tapahtumista ja tarjouksista.</p>
+            <div class="actions-row">
+              <a class="btn btn--secondary" href="https://www.facebook.com/janinsportcafe" rel="noopener noreferrer" target="_blank">Facebook</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="section menu-section" id="menu" aria-labelledby="menu-title-maunula">
+        <h2 id="menu-title-maunula" class="menu-title">Menu</h2>
+        <p class="menu-intro">Janin Sport Cafe · Maunula. VL = vähälaktoosinen · L = laktoositon</p>
+
+        <div class="menu-grid">
+          <div class="menu-column">
+            <div class="menu-block">
+              <h3 class="menu-block__heading">Hampurilaiset</h3>
+              <p class="menu-block__note">Hampurilaiset ilman ranskalaisia. Lisää ranskalaiset tai bataatit alta.</p>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Talon hampurilainen</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">11,90 €</span><span class="menu-item__diet">VL</span></div>
+                </div>
+                <p class="menu-item__desc">200 g naudan täyslihapihvi, briossisämpylä, cheddar, salaatti, tomaatti, punasipuli, talon majoneesi.</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Tuhti, isoon nälkään</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">14,90 €</span><span class="menu-item__diet">VL</span></div>
+                </div>
+                <p class="menu-item__desc">Kaksi 200 g täyslihapihviä, briossisämpylä, cheddar, salaatti, tomaatti, punasipuli, talon majoneesi.</p>
+              </article>
+
+              <p class="menu-subheading">Hampurilaisen ostajalle</p>
+              <article class="menu-item menu-item--tight">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Ranskalaiset</h4>
+                  <span class="menu-item__price">+3,90 €</span>
+                </div>
+              </article>
+              <article class="menu-item menu-item--tight">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Bataattiranskalaiset</h4>
+                  <span class="menu-item__price">+5,90 €</span>
+                </div>
+              </article>
+              <p class="menu-block__note menu-block__note--after">Sisältää ketsupin ja valitsemasi majoneesin.</p>
+            </div>
+
+            <div class="menu-block">
+              <h3 class="menu-block__heading">Korit ja annokset</h3>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Makkarakori</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">9,90 €</span><span class="menu-item__diet">L</span></div>
+                </div>
+                <p class="menu-item__desc">Makkaraa ja rapeita ranskanperunoita.</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Kentuckyn kanakori</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">11,90 €</span><span class="menu-item__diet">L</span></div>
+                </div>
+                <p class="menu-item__desc">Rapeat Kentuckyn kanafileet ja ranskalaiset.</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Herkkukori bratwursteilla</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">12,90 €</span><span class="menu-item__diet">L</span></div>
+                </div>
+                <p class="menu-item__desc">Bratwurstit, sipulirenkaat, lihapullat ja ristikkoperunat — monenlaista dipattavaa.</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Dippitwist</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">12,90 €</span></div>
+                </div>
+                <p class="menu-item__desc">Jalapenopallot, sipulirenkaat, mozzarellatikut ja maalaisperunat.</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Fish &amp; Chips</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">13,90 €</span><span class="menu-item__diet">VL</span></div>
+                </div>
+                <p class="menu-item__desc">Iso rapea kalapala, ranskalaiset ja sitruunalohko.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="menu-column">
+            <div class="menu-block">
+              <h3 class="menu-block__heading">Ranskalaiset</h3>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Ranskalaiset</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">5,90 €</span><span class="menu-item__diet">L</span></div>
+                </div>
+                <p class="menu-item__desc">Ketsuppi ja valitsemasi majoneesi.</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Bataattiranskalaiset</h4>
+                  <div class="menu-item__tail"><span class="menu-item__price">7,90 €</span><span class="menu-item__diet">L</span></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="menu-block">
+              <h3 class="menu-block__heading">Mozzarellatikut tai jalapenopallot</h3>
+              <article class="menu-item">
+                <div class="menu-item__row menu-item__row--multiline">
+                  <span class="menu-item__name menu-item__name--plain">6 kpl · sis. 1 dippi</span>
+                  <span class="menu-item__price">6,90 €</span>
+                </div>
+                <div class="menu-item__row menu-item__row--multiline">
+                  <span class="menu-item__name menu-item__name--plain">12 kpl · sis. 2 dippiä</span>
+                  <span class="menu-item__price">10,90 €</span>
+                </div>
+                <div class="menu-item__row menu-item__row--multiline">
+                  <span class="menu-item__name menu-item__name--plain">25 kpl · sis. 5 dippiä</span>
+                  <span class="menu-item__price">19,90 €</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="menu-block">
+              <h3 class="menu-block__heading">Pizzapalat</h3>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Salami pizzapala</h4>
+                  <span class="menu-item__price">4,50 €</span>
+                </div>
+                <p class="menu-item__desc">Tomaattikastike, mozzarella, provolone, pepperonisalami.</p>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item__row">
+                  <h4 class="menu-item__name">Juustomestarin pizzapala</h4>
+                  <span class="menu-item__price">4,50 €</span>
+                </div>
+                <p class="menu-item__desc">Sinihome, mozzarella, provolone, Pecorino Romano.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-block menu-block--footer">
+          <h3 class="menu-block__heading">Majoneesivaihtoehdot</h3>
+          <p class="menu-footer-lead">Talon, valkosipuli ja chili.</p>
+          <p class="menu-block__note menu-block__note--after">Majoneesit ovat laktoosittomia ja gluteenittomia.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="h-yhteys-m">
+        <h2 id="h-yhteys-m">Yhteystiedot</h2>
+        <div class="contact-block">
+          <p style="margin:0;"><strong>Osoite</strong><br>Rajametsäntie 32<br>00630 Helsinki (Maunula)</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Janin Lounas &amp; Sport Cafe · Fish Corner Hyvönen Oy (Y-tunnus 1512462-0)</p>
+      <p><a href="yhteystiedot.html">Yhteystiedot</a></p>
+    </footer>
+  </div>
+</body>
+</html>
