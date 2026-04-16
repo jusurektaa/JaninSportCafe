@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Pirkkola — Janin Lounas &amp; Sport Cafe</title>
-  <meta name="description" content="Janin Lounas &amp; Sport Pirkkola: aukioloajat, lounas, biljardi ja darts. Pirkkolan metsätie 6, Helsinki.">
+  <meta name="description" content="Janin Lounas &amp; Sport Pirkkola: aukioloajat, lounas, menu, biljardi, darts ja tilausruokailut. Pirkkolan metsätie 6, Helsinki.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/nav.js" defer></script>
 </head>
-<body>
+<body class="page-branch">
   <div class="layout">
     <header class="site-header">
       <div class="site-header__inner">
@@ -22,21 +22,26 @@
         <nav id="primary-nav" class="nav nav--primary" aria-label="Päävalikko">
           <a href="pirkkola.html" aria-current="page">Pirkkola</a>
           <a href="maunula.html">Maunula</a>
-          <a href="tilausruokailut.html">Tilausruokailut</a>
           <a href="yhteystiedot.html">Yhteystiedot</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main class="branch-main branch-main--fullvisual">
+      <div class="branch-visual-hero" aria-hidden="true">
+        <div class="branch-visual-hero__bg"></div>
+      </div>
+
       <p class="back-row"><a href="index.html">← Etusivulle</a></p>
 
-      <h1 class="page-title">Janin Lounas &amp; Sport — Pirkkola</h1>
-      <p class="page-intro">Uimahallin ravintola. Buffet-lounas, keittiöstä tilattavat annokset sekä biljardi ja darts.</p>
+      <header class="branch-intro">
+        <h1 class="page-title">Janin Lounas &amp; Sport — Pirkkola</h1>
+        <p class="page-intro">Uimahallin ravintola. Buffet-lounas, keittiöstä tilattavat annokset sekä biljardi ja darts.</p>
+      </header>
 
-      <div class="two-col">
-        <div>
-          <section class="section" aria-labelledby="h-aukio">
+      <div class="branch-grid">
+        <div class="branch-stack">
+          <section class="content-panel" aria-labelledby="h-aukio">
             <h2 id="h-aukio">Aukioloajat</h2>
             <ul class="hours-list">
               <li><strong>Ma–pe</strong> <span>7.30–21.00</span></li>
@@ -45,7 +50,7 @@
             </ul>
           </section>
 
-          <section class="section" aria-labelledby="h-lounas">
+          <section class="content-panel" aria-labelledby="h-lounas">
             <h2 id="h-lounas">Buffet-lounas</h2>
             <p><strong>Ruokailuajat</strong></p>
             <ul class="hours-list">
@@ -57,156 +62,139 @@
           </section>
         </div>
 
-        <div>
-          <section class="section" aria-labelledby="h-keittio">
+        <div class="branch-stack">
+          <section class="content-panel" aria-labelledby="h-keittio">
             <h2 id="h-keittio">Keittiö &amp; menu</h2>
             <p>Á la carte -lista löytyy alta kohdasta <a href="#menu">Menu</a>. Kysy halutessasi päivän erikoisuuksista tiskiltä.</p>
           </section>
 
-          <section class="section" aria-labelledby="h-pelit">
-            <h2 id="h-pelit">Pelit</h2>
-            <ul class="hours-list">
-              <li><strong>Biljardi</strong> <span>12 € / h</span></li>
-              <li><strong>Darts</strong> <span>8 € / h</span></li>
-            </ul>
+          <section class="content-panel content-panel--pelit" aria-labelledby="h-pelit">
+            <div class="content-panel__title-row">
+              <h2 id="h-pelit">Pelit</h2>
+              <a href="#tilausruokailut" class="content-panel__jump">Tilausruokailut →</a>
+            </div>
+            <div class="activity-grid">
+              <div class="activity-column">
+                <figure class="activity-hero">
+                  <img
+                    src="images/pirkkola-biljardi-hero.png"
+                    alt="Biljardihuone: pöytä, valaistus ja tunnelmallinen tila."
+                    width="1024"
+                    height="682"
+                    loading="lazy"
+                    decoding="async">
+                </figure>
+                <article class="activity-card activity-card--text-only" aria-label="Biljardi">
+                  <p class="activity-card__meta"><strong>Biljardi</strong> <span>12 € / h</span></p>
+                </article>
+              </div>
+              <div class="activity-column">
+                <figure class="activity-hero">
+                  <img
+                    src="images/pirkkola-darts-hero.png"
+                    alt="Tikkahuone: taulut, pöytä ja tunnelmallinen pubi."
+                    width="1024"
+                    height="682"
+                    loading="lazy"
+                    decoding="async">
+                </figure>
+                <article class="activity-card activity-card--text-only" aria-label="Darts">
+                  <p class="activity-card__meta"><strong>Darts</strong> <span>8 € / h</span></p>
+                </article>
+              </div>
+            </div>
           </section>
-
         </div>
       </div>
 
-      <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+      <section class="menu-section menu-section--pirkkola-print" id="menu" aria-labelledby="menu-title">
         <h2 id="menu-title" class="menu-title">Menu</h2>
-        <p class="menu-intro">VL = vähälaktoosinen · L = laktoositon</p>
-
-        <div class="menu-grid">
-          <div class="menu-column">
-            <div class="menu-block">
-              <h3 class="menu-block__heading">Hampurilaisateriat</h3>
-              <p class="menu-block__note">Sisältää ranskalaiset, ketsupin ja talon majoneesin.</p>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Lasten hampurilainen</h4>
-                  <div class="menu-item__tail"><span class="menu-item__price">12,90 €</span><span class="menu-item__diet">VL</span></div>
-                </div>
-                <p class="menu-item__desc">100 g naudan täyslihapihvi, briossisämpylä, cheddar, salaatti, tomaatti, punasipuli, talon majoneesi.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Talon hampurilainen</h4>
-                  <div class="menu-item__tail"><span class="menu-item__price">15,90 €</span><span class="menu-item__diet">VL</span></div>
-                </div>
-                <p class="menu-item__desc">200 g naudan täyslihapihvi, briossisämpylä, cheddar, salaatti, tomaatti, punasipuli, talon majoneesi.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Tuhti hampurilainen</h4>
-                  <div class="menu-item__tail"><span class="menu-item__price">19,90 €</span><span class="menu-item__diet">VL</span></div>
-                </div>
-                <p class="menu-item__desc">Kaksi 200 g täyslihapihviä, briossisämpylä, cheddar, salaatti, tomaatti, punasipuli, talon majoneesi.</p>
-              </article>
-            </div>
-
-            <div class="menu-block">
-              <h3 class="menu-block__heading">Korit</h3>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Makkarakori</h4>
-                  <div class="menu-item__tail"><span class="menu-item__price">11,90 €</span><span class="menu-item__diet">L</span></div>
-                </div>
-                <p class="menu-item__desc">Makkaraa ja rapeita ranskanperunoita.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Kanakori</h4>
-                  <div class="menu-item__tail"><span class="menu-item__price">11,90 €</span><span class="menu-item__diet">L</span></div>
-                </div>
-                <p class="menu-item__desc">Rapeat Kentuckyn kanafileet ja ranskalaiset.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Fish &amp; Chips</h4>
-                  <div class="menu-item__tail"><span class="menu-item__price">13,90 €</span><span class="menu-item__diet">VL</span></div>
-                </div>
-                <p class="menu-item__desc">Iso rapea kalapala ja ranskalaiset.</p>
-              </article>
-            </div>
-          </div>
-
-          <div class="menu-column">
-            <div class="menu-block">
-              <h3 class="menu-block__heading">Pientä purtavaa</h3>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Ranskalaiset</h4>
-                  <div class="menu-item__tail"><span class="menu-item__price">6,90 €</span><span class="menu-item__diet">L</span></div>
-                </div>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Bataattiranskalaiset</h4>
-                  <div class="menu-item__tail"><span class="menu-item__price">8,90 €</span><span class="menu-item__diet">L</span></div>
-                </div>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Mozzarellatikut</h4>
-                  <div class="menu-item__tail menu-item__tail--stack"><span class="menu-item__price">6 kpl 6,90 € · 12 kpl 10,90 €</span></div>
-                </div>
-                <p class="menu-item__desc">Mozzarellatäyte, sopii alkupalaksi.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item__row">
-                  <h4 class="menu-item__name">Jalapenopallot</h4>
-                  <div class="menu-item__tail menu-item__tail--stack"><span class="menu-item__price">6 kpl 6,90 € · 12 kpl 10,90 €</span></div>
-                </div>
-                <p class="menu-item__desc">Juusto ja jalapeno, mieto tulinen.</p>
-              </article>
-            </div>
-          </div>
-        </div>
+        <p class="menu-intro menu-intro--print">Ruokalista esikatseluna (pienennetty). Tekstit ja hinnat näkyvät kuvassa — avaa täysikoko uuteen välilehteen klikkaamalla.</p>
+        <figure class="menu-print">
+          <a href="images/pirkkola-menu-print.png" class="menu-print__link" target="_blank" rel="noopener noreferrer">
+            <img
+              src="images/pirkkola-menu-print.png"
+              alt="Janin Sport Cafe -menu: hampurilaiset, korit, pientä purtavaa, hinnat ja ruokakuvat."
+              width="682"
+              height="1024"
+              loading="lazy"
+              decoding="async">
+          </a>
+          <figcaption class="menu-print__caption">Klikkaa kuvaa avataksesi täysikokoisena uuteen välilehteen.</figcaption>
+        </figure>
       </section>
 
-      <section class="section fb-feed-section" aria-labelledby="h-fb">
-        <h2 id="h-fb">Ajankohtaista — Facebook</h2>
-        <p class="fb-feed-lead">Viimeisimmät julkaisut näkyvät alla. Voit seurata meitä myös suoraan <a href="https://www.facebook.com/janinsportcafe" rel="noopener noreferrer" target="_blank">Facebookissa</a>.</p>
-        <details class="fb-feed-help">
-          <summary>Jos upotus näyttää tyhjältä tai oudolta</summary>
-          <p>Avaa sivu verkko-osoitteesta (<strong>https</strong> tai esim. Live Server), ei suoraan tiedostosta. Tyhjä näkymä voi johtua mainosestosta — salli <code>facebook.com</code> tai käytä toista selainta.</p>
-        </details>
-        <div class="fb-embed-wrap">
-          <p class="fb-embed-status" id="fb-embed-status" aria-live="polite">Ladataan Facebook-upotusta…</p>
-          <div class="fb-iframe-responsive" id="fb-embed-container">
-            <iframe
-              id="fb-page-iframe"
-              title="Janin Lounas &amp; Sport Cafe Facebook-aikajana"
-              width="500"
-              height="900"
-              style="border:none;overflow:hidden"
-              scrolling="no"
-              allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          </div>
-          <p class="fb-embed-fallback" id="fb-embed-fallback" hidden>
-            <a class="btn btn--primary" href="https://www.facebook.com/janinsportcafe" rel="noopener noreferrer" target="_blank">Avaa Facebook-sivu</a>
-          </p>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="h-yhteys">
+      <section class="content-panel" aria-labelledby="h-yhteys">
         <h2 id="h-yhteys">Yhteystiedot</h2>
-        <div class="contact-block">
-          <p style="margin:0;"><strong>Osoite</strong><br>Pirkkolan metsätie 6<br>00630 Helsinki</p>
-          <p style="margin:1rem 0 0;">Tilausruokailut ja ryhmät: katso <a href="tilausruokailut.html">Tilausruokailut</a> tai soita numerot sieltä.</p>
+        <p style="margin:0;"><strong>Osoite</strong><br>Pirkkolan metsätie 6<br>00630 Helsinki</p>
+        <p style="margin:1rem 0 0;">Tilausruokailut ja ryhmät: <a href="#tilausruokailut">katso tiedot alta</a> tai soita alla oleviin numeroihin.</p>
+      </section>
+
+      <section class="tilaus-standout" id="tilausruokailut" aria-labelledby="h-tilaus">
+        <div class="tilaus-standout__shell">
+          <header class="tilaus-standout__intro">
+            <p class="tilaus-standout__kicker">Joukkueille &amp; ryhmille</p>
+            <h2 id="h-tilaus" class="tilaus-standout__title">Tilausruokailut <span class="tilaus-standout__title-accent">Pirkkola</span></h2>
+            <p class="tilaus-standout__lead">Treenit tai peli Pirkkolassa? Tarjoamme joukkue- ja ryhmäruokailut myös lounasajan jälkeen — aina klo 22 asti.</p>
+            <div class="callout tilaus-standout__callout">
+              <p style="margin-top:0;"><strong>Sijainti</strong></p>
+              <ul class="plain" style="margin-bottom:0;">
+                <li>Jäähalli noin 200 m</li>
+                <li>Pirkkolahalli noin 20 m</li>
+              </ul>
+            </div>
+          </header>
+
+          <section class="content-panel content-panel--tilaus-inset" aria-labelledby="h-tilaus-hinta">
+            <h2 id="h-tilaus-hinta">Hinta lounasajan jälkeen</h2>
+            <p class="price-tag">16,50 € / hlö (vähintään 20 hlö)</p>
+          </section>
+
+          <div class="branch-grid tilaus-standout__grid">
+            <section class="content-panel content-panel--tilaus-inset" aria-labelledby="h-tilaus-paa">
+              <h2 id="h-tilaus-paa">Esimerkkejä pääruoista</h2>
+              <p>Lounaspöytään kuuluu runsas salaattipöytä sekä pääruokia, esimerkiksi:</p>
+              <ul class="plain">
+                <li>Lihapullat ruskeassa kastikkeessa <span class="fb-hint">(G, L, M)</span></li>
+                <li>Kananpojan paistileike <span class="fb-hint">(G, L, M)</span></li>
+                <li>Jauhelihalasagne <span class="fb-hint">(L)</span></li>
+              </ul>
+            </section>
+            <section class="content-panel content-panel--tilaus-inset" aria-labelledby="h-tilaus-kasvis">
+              <h2 id="h-tilaus-kasvis">Kasvis- ja vegaaniset vaihtoehdot</h2>
+              <ul class="plain">
+                <li>Kasvispihvit <span class="fb-hint">(G, L)</span></li>
+                <li>Vegekofta <span class="fb-hint">(V, G, L, M, K)</span></li>
+                <li>Maissipihvit <span class="fb-hint">(V, G, L, M, K)</span></li>
+                <li>Halloumi–punajuuripihvi <span class="fb-hint">(G, VL)</span></li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="content-panel content-panel--tilaus-inset content-panel--tilaus-highlight">
+            <p style="margin:0;">Räätälöimme tarjoilun ryhmänne tarpeiden mukaan.</p>
+          </section>
+
+          <section class="content-panel content-panel--tilaus-inset" aria-labelledby="h-tilaus-allerg">
+            <h2 id="h-tilaus-allerg">Allergeenimerkinnät</h2>
+            <p class="fb-hint" style="margin:0;">
+              L = laktoositon · VL = vähälaktoosinen · G = gluteeniton · M = maidoton · V = vegaani · K = kananmuna
+            </p>
+          </section>
+
+          <section class="content-panel content-panel--tilaus-inset content-panel--tilaus-cta" aria-labelledby="h-tilaus-varaa">
+            <h2 id="h-tilaus-varaa">Varaa ruokailu</h2>
+            <p style="margin:0;">
+              <strong>Puhelin:</strong>
+              <a href="tel:+358406879606">040 687 9606</a>
+              tai
+              <a href="tel:+358447062000">044 706 2000</a>
+            </p>
+            <p style="margin:1rem 0 0;">
+              <strong>Sähköposti:</strong>
+              <a href="mailto:janinsportcafe@hotmail.com">janinsportcafe@hotmail.com</a>
+            </p>
+          </section>
         </div>
       </section>
     </main>
@@ -216,124 +204,5 @@
       <p><a href="yhteystiedot.html">Yhteystiedot</a></p>
     </footer>
   </div>
-  <script>
-  (function () {
-    var FB_PAGE = "https://www.facebook.com/janinsportcafe";
-    var container = document.getElementById("fb-embed-container");
-    var iframe = document.getElementById("fb-page-iframe");
-    var fallback = document.getElementById("fb-embed-fallback");
-    var statusEl = document.getElementById("fb-embed-status");
-    if (!container || !iframe) return;
-
-    var lastAppliedW = 0;
-    var resizeTimer;
-
-    function pluginUrl(widthPx) {
-      var q = new URLSearchParams({
-        href: FB_PAGE,
-        tabs: "timeline",
-        width: String(widthPx),
-        height: "920",
-        small_header: "true",
-        adapt_container_width: "true",
-        hide_cover: "true",
-        show_facepile: "false"
-      });
-      return "https://www.facebook.com/plugins/page.php?" + q.toString();
-    }
-
-    function measureWidth() {
-      var raw = Math.floor(container.getBoundingClientRect().width);
-      if (!raw || raw < 120) {
-        raw = Math.min(500, Math.max(280, Math.floor(window.innerWidth - 48)));
-      }
-      return Math.min(500, Math.max(180, raw));
-    }
-
-    function applySize(force) {
-      if (window.location.protocol === "file:") {
-        if (fallback) fallback.hidden = false;
-        showStatus("Upotus ei toimi tiedostosta avattuna. Käytä https-osoitetta tai paikallista palvelinta, tai avaa Facebook alla.");
-        return;
-      }
-      var w = measureWidth();
-      if (!force && iframe.src && Math.abs(w - lastAppliedW) < 3) {
-        return;
-      }
-      lastAppliedW = w;
-      var url = pluginUrl(w);
-      iframe.setAttribute("data-fb-url", url);
-      iframe.src = url;
-      iframe.setAttribute("width", w);
-      iframe.setAttribute("height", "920");
-      iframe.style.width = w + "px";
-      iframe.style.maxWidth = "100%";
-      iframe.style.minHeight = "920px";
-    }
-
-    function hideStatus() {
-      if (statusEl) {
-        statusEl.hidden = true;
-        statusEl.textContent = "";
-      }
-    }
-
-    function showStatus(msg) {
-      if (statusEl) {
-        statusEl.hidden = false;
-        statusEl.textContent = msg;
-      }
-    }
-
-    function initAfterLayout() {
-      applySize(true);
-    }
-
-    function kick() {
-      requestAnimationFrame(function () {
-        requestAnimationFrame(initAfterLayout);
-      });
-    }
-
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", kick);
-    } else {
-      kick();
-    }
-
-    window.addEventListener("load", function () {
-      requestAnimationFrame(initAfterLayout);
-    });
-
-    if (typeof ResizeObserver !== "undefined") {
-      var ro = new ResizeObserver(function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-          applySize(false);
-        }, 200);
-      });
-      ro.observe(container);
-    } else {
-      window.addEventListener("resize", function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-          applySize(false);
-        }, 200);
-      });
-    }
-
-    var statusFallbackTimer = setTimeout(function () {
-      hideStatus();
-    }, 15000);
-
-    iframe.addEventListener("load", function () {
-      clearTimeout(statusFallbackTimer);
-      if (window.location.protocol !== "file:") {
-        hideStatus();
-      }
-      iframe.classList.add("is-loaded");
-    });
-  })();
-  </script>
 </body>
 </html>

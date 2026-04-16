@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/nav.js" defer></script>
+  <script src="js/home-reveal.js" defer></script>
 </head>
 <body class="page-home">
   <div class="layout">
@@ -22,7 +23,6 @@
         <nav id="primary-nav" class="nav nav--primary" aria-label="Päävalikko">
           <a href="pirkkola.html">Pirkkola</a>
           <a href="maunula.html">Maunula</a>
-          <a href="tilausruokailut.html">Tilausruokailut</a>
           <a href="yhteystiedot.html">Yhteystiedot</a>
         </nav>
       </div>
@@ -32,17 +32,17 @@
       <section class="home-hero" aria-labelledby="home-hero-title">
         <div class="home-hero__bg" aria-hidden="true"></div>
         <div class="home-hero__inner">
-          <p class="home-hero__eyebrow">Helsinki · Pirkkola &amp; Maunula</p>
-          <h1 id="home-hero-title" class="home-hero__title">Lounasta, peliä ja hyvää fiilistä</h1>
-          <p class="home-hero__lead">
+          <p class="home-hero__eyebrow home-reveal" style="--reveal-delay: 0ms">Helsinki · Pirkkola &amp; Maunula</p>
+          <h1 id="home-hero-title" class="home-hero__title home-reveal" style="--reveal-delay: 90ms">Lounasta, peliä ja hyvää fiilistä</h1>
+          <p class="home-hero__lead home-reveal" style="--reveal-delay: 180ms">
             Uimahallin lounasravintola Pirkkolassa ja sporttibaari Maunulassa — sama lämmin palvelu, kaksi eri tunnelmaa.
           </p>
           <ul class="home-hero__chips" aria-label="Palvelut pähkinänkuoressa">
-            <li>Buffet-lounas</li>
-            <li>Biljardi &amp; darts</li>
-            <li>Ryhmäruokailut</li>
+            <li class="home-reveal" style="--reveal-delay: 270ms">Buffet-lounas</li>
+            <li class="home-reveal" style="--reveal-delay: 340ms">Biljardi &amp; darts</li>
+            <li class="home-reveal" style="--reveal-delay: 410ms">Ryhmäruokailut</li>
           </ul>
-          <div class="home-hero__actions">
+          <div class="home-hero__actions home-reveal" style="--reveal-delay: 500ms">
             <a class="btn btn--ghost-dark" href="yhteystiedot.html">Yhteystiedot</a>
           </div>
         </div>
@@ -50,12 +50,12 @@
 
       <div class="home-main__inner">
         <header class="home-pick">
-          <h2 class="home-pick__title">Valitse toimipiste</h2>
-          <p class="home-pick__subtitle">Avaa tiedot, aukioloajat ja yhteystiedot yhdellä klikkauksella.</p>
+          <h2 class="home-pick__title home-reveal">Valitse toimipiste</h2>
+          <p class="home-pick__subtitle home-reveal" style="--reveal-delay: 80ms">Avaa tiedot, aukioloajat ja yhteystiedot yhdellä klikkauksella.</p>
         </header>
 
         <div class="cards cards--home">
-          <article class="card card--home">
+          <article class="card card--home home-reveal">
             <a class="card__link" href="pirkkola.html">
               <div class="card__image">
                 <img src="https://janinsportcafe.fi/data/uploads/logot/pirkkola.png" alt="" width="200" height="80" loading="lazy" decoding="async">
@@ -68,7 +68,7 @@
             </a>
           </article>
 
-          <article class="card card--home">
+          <article class="card card--home home-reveal">
             <a class="card__link" href="maunula.html">
               <div class="card__image">
                 <img src="https://janinsportcafe.fi/data/uploads/logot/maunula.png" alt="" width="200" height="80" loading="lazy" decoding="async">
@@ -80,20 +80,15 @@
               </div>
             </a>
           </article>
-
-          <article class="card card--home">
-            <a class="card__link" href="tilausruokailut.html">
-              <div class="card__image">
-                <img src="https://janinsportcafe.fi/data/uploads/muut_kuvat/tilausruoka.png" alt="" width="200" height="80" loading="lazy" decoding="async">
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Tilausruokailut</h3>
-                <p class="card__meta">Joukkue- ja ryhmäruokailut Pirkkolassa — myös lounasajan jälkeen.</p>
-                <span class="card__cta">Tutustu <span class="card__cta-arrow" aria-hidden="true">→</span></span>
-              </div>
-            </a>
-          </article>
         </div>
+
+        <section class="home-tilaus" aria-labelledby="home-tilaus-title">
+          <h2 id="home-tilaus-title" class="home-pick__title home-reveal">Tilausruokailut</h2>
+          <p class="home-pick__subtitle home-reveal" style="--reveal-delay: 80ms">Joukkue- ja ryhmäruokailut Pirkkolassa — myös lounasajan jälkeen klo 22 asti.</p>
+          <div class="home-tilaus__cta home-reveal" style="--reveal-delay: 160ms">
+            <a class="btn btn--primary" href="pirkkola.html#tilausruokailut">Tilausruokailut Pirkkolassa</a>
+          </div>
+        </section>
       </div>
     </main>
 
