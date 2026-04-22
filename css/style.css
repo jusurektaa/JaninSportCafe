@@ -937,7 +937,7 @@ ul.plain li {
   border-top: 1px solid var(--border);
 }
 
-.site-footer a {
+.site-footer > p > a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -947,8 +947,13 @@ ul.plain li {
   color: var(--accent);
 }
 
-.site-footer a:hover {
+.site-footer > p > a:hover {
   color: var(--accent-hover);
+}
+
+.site-footer .social-links--footer {
+  justify-content: center;
+  margin: 0.65rem 0 0.85rem;
 }
 
 .layout {
