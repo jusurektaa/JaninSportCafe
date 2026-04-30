@@ -270,7 +270,7 @@ main {
 .branch-visual-hero .branch-visual-hero__bg {
   position: absolute;
   inset: 0;
-  background: url("../images/home-hero-bg.jpg") center / cover no-repeat;
+  background: url("../images/home-hero-bg-new.png") center / cover no-repeat;
 }
 
 .page-branch .branch-intro {
@@ -1185,7 +1185,7 @@ main.home-main {
       rgba(5, 14, 10, 0.38) 44%,
       rgba(3, 10, 7, 0.72) 100%
     ),
-    url("../images/home-hero-bg.jpg");
+    url("../images/home-hero-bg-new.png");
   background-size: cover, cover, cover;
   background-position: center, center, center 40%;
   background-repeat: no-repeat;
@@ -1522,6 +1522,65 @@ main.home-main {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.menu-print--inline {
+  margin-top: 1.25rem;
+  max-width: min(18rem, 82vw);
+}
+
+@media (min-width: 40rem) {
+  .menu-print--inline {
+    max-width: min(20rem, 38vw);
+  }
+}
+
+.menu-print--inline img {
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
+}
+
+.menu-print--banner {
+  position: relative;
+  isolation: isolate;
+  margin-top: 1.4rem;
+  max-width: 100%;
+  border-radius: 0 0 14px 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.menu-print--banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 31, 25, 0.88) 0%,
+    rgba(20, 31, 25, 0.42) 22%,
+    rgba(20, 31, 25, 0) 46%
+  );
+}
+
+.menu-print--banner img {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  object-position: center 56%;
+}
+
+@media (max-width: 47.98rem) {
+  .menu-print--banner img {
+    aspect-ratio: 16 / 9;
+    object-position: center 52%;
+  }
 }
 
 .menu-print__caption {
