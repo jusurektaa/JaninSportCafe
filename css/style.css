@@ -220,15 +220,24 @@ code {
 }
 
 .site-header {
-  background: rgba(255, 253, 248, 0.92);
-  backdrop-filter: blur(16px) saturate(1.15);
-  -webkit-backdrop-filter: blur(16px) saturate(1.15);
-  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 50;
   padding-top: env(safe-area-inset-top, 0);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset, 0 8px 28px rgba(28, 25, 22, 0.04);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 248, 0.97) 0%,
+    rgba(251, 247, 240, 0.93) 55%,
+    rgba(247, 242, 234, 0.9) 100%
+  );
+  backdrop-filter: blur(22px) saturate(1.28);
+  -webkit-backdrop-filter: blur(22px) saturate(1.28);
+  border-bottom: 1px solid rgba(28, 25, 22, 0.065);
+  box-shadow:
+    0 1px 0 rgba(255, 253, 248, 0.85) inset,
+    0 -1px 0 rgba(196, 163, 79, 0.14) inset,
+    0 14px 42px rgba(18, 17, 15, 0.07),
+    0 2px 6px rgba(18, 17, 15, 0.04);
 }
 
 .site-header__inner {
@@ -246,13 +255,14 @@ code {
   flex: 1 1 auto;
   min-width: 0;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.05rem, 3.2vw, 1.2rem);
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: clamp(1.08rem, 3.2vw, 1.28rem);
+  line-height: 1.15;
   color: var(--ink-soft);
   text-decoration: none;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.025em;
   padding: 0.35rem 0;
+  transition: color 0.22s ease, opacity 0.22s ease;
 }
 
 .brand:hover {
@@ -270,17 +280,25 @@ code {
   height: 2.75rem;
   padding: 0;
   margin: 0;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--paper);
+  border: 1px solid rgba(28, 25, 22, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 253, 248, 0.88);
+  box-shadow:
+    0 1px 0 rgba(255, 253, 248, 0.95) inset,
+    0 2px 10px rgba(28, 25, 22, 0.05);
   cursor: pointer;
   color: var(--ink-soft);
   -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .nav-toggle:hover {
-  border-color: rgba(196, 163, 79, 0.45);
+  border-color: rgba(196, 163, 79, 0.5);
   color: var(--ink-soft);
+  background: rgba(255, 253, 248, 0.98);
+  box-shadow:
+    0 1px 0 rgba(255, 253, 248, 1) inset,
+    0 4px 16px rgba(28, 25, 22, 0.07);
 }
 
 .nav-toggle:focus-visible {
@@ -321,7 +339,7 @@ code {
 
 .nav.nav--primary a {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--muted);
   text-decoration: none;
   padding: 0.85rem 0.15rem;
@@ -329,6 +347,7 @@ code {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--border-subtle);
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
 .nav.nav--primary a:last-child {
@@ -336,16 +355,19 @@ code {
 }
 
 .nav.nav--primary a:hover,
-.nav.nav--primary a:focus-visible,
+.nav.nav--primary a:focus-visible {
+  color: var(--ink-soft);
+}
+
 .nav.nav--primary a[aria-current="page"] {
-  color: var(--link-hover);
+  color: var(--ink-soft);
 }
 
 @media (min-width: 48rem) {
   .site-header__inner {
     flex-wrap: nowrap;
-    padding: 1rem 1.25rem;
-    gap: 1rem;
+    padding: 1rem 1.5rem;
+    gap: 1.25rem;
   }
 
   .brand {
@@ -363,18 +385,59 @@ code {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem 1.25rem;
+    gap: 0.2rem;
     width: auto;
     margin: 0;
-    padding: 0;
+    padding: 0.28rem;
     border-top: none;
+    background: rgba(255, 253, 248, 0.65);
+    border: 1px solid rgba(28, 25, 22, 0.06);
+    border-radius: 999px;
+    box-shadow:
+      0 1px 0 rgba(255, 253, 248, 0.95) inset,
+      0 4px 22px rgba(28, 25, 22, 0.045),
+      0 1px 3px rgba(28, 25, 22, 0.04);
   }
 
   .nav.nav--primary a {
     font-size: 0.9375rem;
-    padding: 0.5rem 0.15rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.52rem 1.15rem;
     min-height: 0;
     border-bottom: none;
+    border-radius: 999px;
+    color: var(--muted);
+    transition:
+      color 0.2s ease,
+      background 0.22s ease,
+      box-shadow 0.22s ease,
+      transform 0.2s ease;
+  }
+
+  .nav.nav--primary a:hover,
+  .nav.nav--primary a:focus-visible {
+    color: var(--ink-soft);
+    background: rgba(255, 253, 248, 0.95);
+    box-shadow: 0 2px 10px rgba(28, 25, 22, 0.06);
+  }
+
+  .nav.nav--primary a[aria-current="page"] {
+    color: var(--ink-soft);
+    background: linear-gradient(165deg, rgba(47, 88, 69, 0.16) 0%, rgba(47, 88, 69, 0.07) 100%);
+    box-shadow:
+      0 1px 0 rgba(255, 253, 248, 0.55) inset,
+      0 1px 4px rgba(47, 88, 69, 0.12);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .nav.nav--primary a:hover {
+      transform: translateY(-1px);
+    }
+
+    .nav.nav--primary a[aria-current="page"]:hover {
+      transform: none;
+    }
   }
 }
 
@@ -390,7 +453,8 @@ main {
   }
 
   .page-pirkkola main.branch-main,
-  .page-maunula main.branch-main {
+  .page-maunula main.branch-main,
+  .page-contact.page-branch main.branch-main {
     padding-top: 0;
     padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
     padding-left: env(safe-area-inset-left, 0px);
@@ -399,7 +463,7 @@ main {
 }
 
 .page-contact main {
-  max-width: var(--panel-max);
+  max-width: none;
 }
 
 /* Toimipistesivut (Pirkkola / Maunula): laatikot kuten etusivulla */
@@ -417,6 +481,7 @@ main {
 .page-branch main.branch-main > .back-row,
 .page-branch main.branch-main > .branch-intro,
 .page-branch main.branch-main > .branch-grid,
+.page-branch main.branch-main > .branch-stack,
 .page-branch main.branch-main > section {
   max-width: var(--panel-max);
   margin-left: auto;
@@ -431,26 +496,99 @@ main {
 
 .page-branch main.branch-main > .back-row {
   margin-bottom: 0;
-  padding: 0.65rem max(1rem, env(safe-area-inset-left)) 0.65rem max(1rem, env(safe-area-inset-right));
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  padding: 0.35rem max(1rem, env(safe-area-inset-left)) 0.85rem max(1rem, env(safe-area-inset-right));
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.page-branch main.branch-main > .back-row .back-row__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  padding: 0.65rem 1.35rem 0.65rem 1.1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--ink-soft);
+  background: linear-gradient(
+    165deg,
+    rgba(255, 253, 248, 0.99) 0%,
+    rgba(247, 242, 233, 0.96) 48%,
+    rgba(241, 235, 224, 0.94) 100%
+  );
+  border: 1px solid rgba(28, 25, 22, 0.08);
+  border-radius: 999px;
+  box-shadow:
+    0 1px 0 rgba(255, 253, 248, 0.98) inset,
+    0 2px 0 rgba(196, 163, 79, 0.12) inset,
+    0 8px 28px rgba(28, 25, 22, 0.07),
+    0 2px 6px rgba(28, 25, 22, 0.04);
+  transition:
+    color 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease,
+    background 0.22s ease;
+}
+
+.page-branch main.branch-main > .back-row .back-row__link::before {
+  content: "←";
+  font-weight: 600;
+  font-size: 1.05em;
+  line-height: 1;
+  opacity: 0.72;
+  flex-shrink: 0;
+  transform: translateY(-0.03em);
+}
+
+.page-branch main.branch-main > .back-row .back-row__link:hover {
+  color: var(--link);
+  border-color: rgba(196, 163, 79, 0.42);
+  background: linear-gradient(
+    165deg,
+    rgba(255, 253, 248, 1) 0%,
+    rgba(252, 248, 238, 0.98) 100%
+  );
+  box-shadow:
+    0 1px 0 rgba(255, 253, 248, 1) inset,
+    0 2px 0 rgba(196, 163, 79, 0.2) inset,
+    0 12px 36px rgba(28, 25, 22, 0.09),
+    0 2px 8px rgba(47, 88, 69, 0.08);
+}
+
+.page-branch main.branch-main > .back-row .back-row__link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-branch main.branch-main > .back-row .back-row__link:hover {
+    transform: translateY(-1px);
+  }
 }
 
 /* Pirkkola & Maunula: täysleveys, korkeus, vaalea tausta pääalueella */
 .page-pirkkola .site-header__inner,
-.page-maunula .site-header__inner {
+.page-maunula .site-header__inner,
+.page-contact .site-header__inner {
   max-width: none;
 }
 
 .page-pirkkola .layout,
-.page-maunula .layout {
+.page-maunula .layout,
+.page-contact .layout {
   min-height: 100dvh;
 }
 
 .page-pirkkola main.branch-main,
-.page-maunula main.branch-main {
+.page-maunula main.branch-main,
+.page-contact.page-branch main.branch-main {
   flex: 1 1 auto;
   max-width: none;
   width: 100%;
@@ -533,16 +671,52 @@ main {
   display: inline-block;
 }
 
+.content-panel.content-panel--lounas-split > h2 {
+  font-size: clamp(1.32rem, 2.75vw, 1.55rem);
+}
+
+/* Buffet-kuvat lounaslistan yläpuolella (Pirkkola) */
+.lounas-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin: 0.35rem 0 1.15rem;
+}
+
+@media (min-width: 40rem) {
+  .lounas-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+}
+
+.lounas-gallery__item {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--box-border-subtle);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
+  line-height: 0;
+  background: var(--surface-3);
+}
+
+.lounas-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Pirkkola: Lounastaja JSON — tänään vasemmalla, muut päivät oikealla */
 .content-panel--lounas-split .lounas-split__meta {
   margin: -0.35rem 0 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--on-box-muted);
 }
 
 .content-panel--lounas-split .lounas-split__msg {
   margin: 0 0 1rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.55;
   color: var(--on-box-muted);
 }
@@ -571,7 +745,7 @@ main {
 .lounas-split__col-title {
   margin: 0 0 0.75rem;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.28rem;
   font-weight: 700;
   color: var(--on-box-heading);
   letter-spacing: -0.02em;
@@ -591,14 +765,14 @@ main {
 .lounas-split__loading,
 .lounas-split__empty {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: var(--on-box-muted);
   line-height: 1.5;
 }
 
 .lounas-split__error {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: var(--on-box-muted);
   line-height: 1.5;
 }
@@ -626,7 +800,7 @@ main {
 .lounas-split__dish {
   margin: 0 0 0.35rem;
   font-weight: 600;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   color: var(--on-box);
   line-height: 1.35;
 }
@@ -638,7 +812,7 @@ main {
 }
 
 .lounas-split__badge {
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -650,7 +824,7 @@ main {
 
 .lounas-split__desc {
   margin: 0.25rem 0 0;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.45;
   color: var(--on-box-faint);
 }
@@ -659,7 +833,7 @@ main {
   margin: 0;
   color: var(--accent-on-dark);
   font-weight: 600;
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 .lounas-split__day-block {
@@ -676,7 +850,7 @@ main {
 
 .lounas-split__day-name {
   margin: 0 0 0.65rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -687,7 +861,7 @@ main {
   margin: 1.25rem 0 0;
   padding-top: 1rem;
   border-top: 1px solid var(--box-border-subtle);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   text-align: center;
 }
 
@@ -737,6 +911,10 @@ main {
   .branch-grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
+  }
+
+  .branch-grid:has(> :only-child) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -922,7 +1100,6 @@ main {
 .tilaus-standout__callout {
   margin: 0;
   background: var(--surface-3);
-  border-color: var(--box-border);
   box-shadow: none;
   color: var(--on-box-muted);
 }
@@ -933,7 +1110,7 @@ main {
 
 .tilaus-standout .content-panel--tilaus-inset {
   background: var(--surface-2);
-  border: 1px solid var(--box-border);
+  border: 2px solid rgba(255, 253, 248, 0.18);
   box-shadow: none;
   color: var(--on-box-muted);
 }
@@ -944,12 +1121,14 @@ main {
 }
 
 .tilaus-standout .content-panel--tilaus-highlight {
-  border-left: 4px solid var(--accent-on-dark);
+  border: 2px solid rgba(255, 253, 248, 0.18);
+  border-left-width: 4px;
+  border-left-color: var(--accent-on-dark);
   background: var(--surface-3);
 }
 
 .tilaus-standout .content-panel--tilaus-cta {
-  border: 1px solid var(--accent-dim);
+  border: 2px solid rgba(149, 201, 176, 0.48);
   background: rgba(47, 88, 69, 0.18);
   box-shadow: none;
 }
@@ -1177,6 +1356,12 @@ main {
 
 .callout p:last-child {
   margin-bottom: 0;
+}
+
+/* Tilausruokailut (Pirkkola): Sijainti-callout — vahvempi reuna kuin yleinen .callout */
+.tilaus-standout .callout.tilaus-standout__callout {
+  border: 2px solid rgba(255, 253, 248, 0.16);
+  border-left: 4px solid var(--accent-on-dark);
 }
 
 .price-tag {
@@ -1491,8 +1676,9 @@ ul.plain li {
   color: var(--on-box-muted);
 }
 
-/* ——— Etusivu: scroll / avaus -animaatiot ——— */
-.page-home .home-reveal {
+/* ——— Etusivu & toimipisteet: scroll / avaus -animaatiot ——— */
+.page-home .home-reveal,
+.page-branch .home-reveal {
   opacity: 0;
   transform: translateY(1.15rem);
   filter: blur(4px);
@@ -1503,7 +1689,8 @@ ul.plain li {
   transition-delay: var(--reveal-delay, 0ms);
 }
 
-.page-home .home-reveal.is-revealed {
+.page-home .home-reveal.is-revealed,
+.page-branch .home-reveal.is-revealed {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
@@ -1538,7 +1725,8 @@ ul.plain li {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-home .home-reveal {
+  .page-home .home-reveal,
+  .page-branch .home-reveal {
     opacity: 1;
     transform: none;
     filter: none;
@@ -1548,9 +1736,17 @@ ul.plain li {
 
 /* ——— Etusivu ——— */
 .page-home .site-header--home {
-  background: rgba(255, 253, 248, 0.82);
-  border-bottom-color: rgba(212, 184, 118, 0.22);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 12px 40px rgba(18, 17, 15, 0.06);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 248, 0.88) 0%,
+    rgba(251, 247, 240, 0.82) 100%
+  );
+  border-bottom-color: rgba(212, 184, 118, 0.2);
+  box-shadow:
+    0 1px 0 rgba(255, 253, 248, 0.75) inset,
+    0 -1px 0 rgba(212, 184, 118, 0.18) inset,
+    0 16px 48px rgba(18, 17, 15, 0.055),
+    0 2px 8px rgba(18, 17, 15, 0.035);
 }
 
 main.home-main {
@@ -2036,7 +2232,7 @@ main.home-main {
 .menu-title {
   margin: 0 0 0.35rem;
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3.5vw, 1.65rem);
+  font-size: clamp(1.52rem, 3.8vw, 1.88rem);
   font-weight: 700;
   letter-spacing: 0.1em;
   text-align: center;
@@ -2047,7 +2243,7 @@ main.home-main {
 .menu-intro {
   margin: 0 auto 1rem;
   text-align: center;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   color: var(--on-box-muted);
 }
 
@@ -2061,6 +2257,65 @@ main.home-main {
   .menu-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .menu-section.menu-section--pirkkola-split .menu-grid--pirkkola-stack {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pirkkola: menu — ruuat vasemmalla, kuvat oikealla (52rem+) */
+.menu-layout {
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (min-width: 52rem) {
+  .menu-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.35rem 1.5rem;
+  }
+}
+
+.menu-layout__menu {
+  min-width: 0;
+}
+
+.menu-section.menu-section--pirkkola-split .menu-grid--pirkkola-stack {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.menu-layout__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.menu-section.menu-section--pirkkola-split .menu-layout__visual {
+  gap: 0.55rem;
+}
+
+.menu-layout__photo {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.menu-section.menu-section--pirkkola-split .menu-layout__photo {
+  width: 100%;
+  max-width: none;
+  align-self: stretch;
+  border: 1px solid var(--box-border-subtle);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
+}
+
+.menu-layout__photo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .menu-column {
@@ -2071,7 +2326,7 @@ main.home-main {
 
 .menu-block__heading {
   margin: 0 0 0.4rem;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2082,7 +2337,7 @@ main.home-main {
 
 .menu-block__note {
   margin: 0 0 0.65rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.4;
   color: var(--on-box-muted);
 }
@@ -2108,7 +2363,7 @@ main.home-main {
 
 .menu-item__name {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   line-height: 1.3;
   color: var(--on-box);
@@ -2132,7 +2387,7 @@ main.home-main {
 }
 
 .menu-item__tail--stack .menu-item__price {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.35;
   white-space: normal;
   text-align: right;
@@ -2141,12 +2396,12 @@ main.home-main {
 
 .menu-item__price {
   font-weight: 700;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   color: var(--gold-light);
 }
 
 .menu-item__diet {
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -2160,7 +2415,7 @@ main.home-main {
 .menu-item__desc {
   margin: 0.2rem 0 0;
   padding-right: 0.5rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.45;
   color: var(--on-box-faint);
 }
@@ -2171,7 +2426,7 @@ main.home-main {
 
 .menu-subheading {
   margin: 0.75rem 0 0.2rem;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2195,7 +2450,7 @@ main.home-main {
 
 .menu-item__name--plain {
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--on-box);
 }
 
@@ -2209,7 +2464,7 @@ main.home-main {
 
 .menu-footer-lead {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.45;
   color: var(--on-box-muted);
 }
@@ -2235,7 +2490,8 @@ main.home-main {
   }
 
   .page-pirkkola main.branch-main,
-  .page-maunula main.branch-main {
+  .page-maunula main.branch-main,
+  .page-contact.page-branch main.branch-main {
     padding-left: env(safe-area-inset-left, 0px);
     padding-right: env(safe-area-inset-right, 0px);
   }
@@ -2245,12 +2501,19 @@ main.home-main {
     padding-right: max(1rem, env(safe-area-inset-right));
   }
 
-  .back-row a {
+  .back-row a,
+  .back-row__link {
     display: inline-flex;
     align-items: center;
     min-height: 2.75rem;
     padding: 0.15rem 0;
     touch-action: manipulation;
+  }
+
+  .page-branch main.branch-main > .back-row .back-row__link {
+    min-height: 2.75rem;
+    padding-left: 1.15rem;
+    padding-right: 1.35rem;
   }
 
   .two-col {

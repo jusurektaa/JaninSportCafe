@@ -28,6 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/nav.js" defer></script>
+  <script src="js/home-reveal.js" defer></script>
 </head>
 <body class="page-branch page-pirkkola">
   <a class="skip-link" href="#main-content">Hyppää sisältöön</a>
@@ -51,16 +52,16 @@
         <div class="branch-visual-hero__bg"></div>
       </div>
 
-      <p class="back-row"><a href="index.html">← Etusivulle</a></p>
+      <p class="back-row home-reveal"><a class="back-row__link" href="index.html">Etusivulle</a></p>
 
-      <header class="branch-intro">
+      <header class="branch-intro home-reveal" style="--reveal-delay: 70ms">
         <h1 class="page-title">Janin Lounas &amp; Sport — Pirkkola</h1>
         <p class="page-intro">Uimahallin ravintola. Buffet-lounas, keittiöstä tilattavat annokset sekä biljardi ja darts.</p>
       </header>
 
       <div class="branch-grid">
         <div class="branch-stack">
-          <section class="content-panel" aria-labelledby="h-aukio">
+          <section class="content-panel home-reveal" style="--reveal-delay: 0ms" aria-labelledby="h-aukio">
             <h2 id="h-aukio">Aukioloajat</h2>
             <ul class="hours-list">
               <li><strong>Ma–pe</strong> <span>7.30–21.00</span></li>
@@ -69,60 +70,50 @@
             </ul>
           </section>
 
-          <section class="content-panel" aria-labelledby="h-lounas">
+          <section class="content-panel home-reveal" style="--reveal-delay: 90ms" aria-labelledby="h-lounas">
             <h2 id="h-lounas">Buffet-lounas</h2>
             <p><strong>Ruokailuajat</strong></p>
             <ul class="hours-list">
-              <li><strong>Arkisin</strong> <span>klo 10.00–15.00</span></li>
+              <li><strong>Arkisin</strong> <span>klo 10.00–16.00</span></li>
               <li><strong>Lauantaisin</strong> <span>klo 10.30–17.00</span></li>
               <li><strong>Sunnuntaisin</strong> <span>klo 10.30–17.00</span></li>
             </ul>
             <p class="price-tag" style="margin-top:1rem;">Take away: 17,90 € / kg</p>
           </section>
         </div>
-
-        <div class="branch-stack">
-          <section class="content-panel content-panel--pelit" aria-labelledby="h-pelit">
-            <div class="content-panel__title-row">
-              <h2 id="h-pelit">Pelit</h2>
-              <a href="#tilausruokailut" class="content-panel__jump">Tilausruokailut →</a>
-            </div>
-            <div class="activity-grid">
-              <div class="activity-column">
-                <figure class="activity-hero">
-                  <img
-                    src="images/pirkkola-biljardi-hero.png"
-                    alt="Biljardihuone: pöytä, valaistus ja tunnelmallinen tila."
-                    width="1024"
-                    height="682"
-                    loading="lazy"
-                    decoding="async">
-                </figure>
-                <article class="activity-card activity-card--text-only" aria-label="Biljardi">
-                  <p class="activity-card__meta"><strong>Biljardi</strong> <span>12 € / h</span></p>
-                </article>
-              </div>
-              <div class="activity-column">
-                <figure class="activity-hero">
-                  <img
-                    src="images/pirkkola-darts-hero.png"
-                    alt="Tikkahuone: taulut, pöytä ja tunnelmallinen pubi."
-                    width="1024"
-                    height="682"
-                    loading="lazy"
-                    decoding="async">
-                </figure>
-                <article class="activity-card activity-card--text-only" aria-label="Darts">
-                  <p class="activity-card__meta"><strong>Darts</strong> <span>8 € / h</span></p>
-                </article>
-              </div>
-            </div>
-          </section>
-        </div>
       </div>
 
-      <section class="content-panel content-panel--lounas-split content-panel--branch-wide" aria-labelledby="h-lounaslista-split">
+      <section class="content-panel content-panel--lounas-split content-panel--branch-wide home-reveal" aria-labelledby="h-lounaslista-split">
         <h2 id="h-lounaslista-split">Viikon lounaslista</h2>
+        <div class="lounas-gallery" role="group" aria-label="Buffet-lounas kuvina">
+          <figure class="lounas-gallery__item">
+            <img
+              src="images/pirkkola-lounas-buffet-salaatti.png"
+              alt="Runsas salaattibuffet lounaspöydässä."
+              width="800"
+              height="450"
+              loading="lazy"
+              decoding="async">
+          </figure>
+          <figure class="lounas-gallery__item">
+            <img
+              src="images/pirkkola-lounas-buffet-vaihtoehdot.png"
+              alt="Lounaspöytä: yli 30 eri vaihtoehtoa."
+              width="800"
+              height="450"
+              loading="lazy"
+              decoding="async">
+          </figure>
+          <figure class="lounas-gallery__item">
+            <img
+              src="images/pirkkola-lounas-buffet-proteiinit.png"
+              alt="Lounaspöytä: katkarapuja, savulohta, broileria ja hedelmiä."
+              width="800"
+              height="450"
+              loading="lazy"
+              decoding="async">
+          </figure>
+        </div>
         <p id="lounas-week-meta" class="lounas-split__meta" hidden></p>
         <p id="lounas-week-msg" class="lounas-split__msg" hidden></p>
         <div class="lounas-split">
@@ -145,11 +136,13 @@
         <script defer src="js/lounaslista-pirkkola.js"></script>
       </section>
 
-      <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <section class="menu-section menu-section--pirkkola-split home-reveal" id="menu" aria-labelledby="menu-title">
         <h2 id="menu-title" class="menu-title">Menu</h2>
         <p class="menu-intro">Pirkkolan listan annokset kirjoitettuna.</p>
-        <div class="menu-grid">
-          <div class="menu-column">
+        <div class="menu-layout">
+          <div class="menu-layout__menu">
+            <div class="menu-grid menu-grid--pirkkola-stack">
+              <div class="menu-column">
             <section aria-labelledby="menu-burgerit">
               <h3 id="menu-burgerit" class="menu-block__heading">Hampurilaisateriat</h3>
               <p class="menu-block__note">Sisaltaa ranskalaiset, ketsupin ja talon majoneesin.</p>
@@ -208,7 +201,7 @@
             </section>
           </div>
 
-          <div class="menu-column">
+              <div class="menu-column">
             <section aria-labelledby="menu-pienta">
               <h3 id="menu-pienta" class="menu-block__heading">Pienta purtavaa</h3>
 
@@ -251,25 +244,84 @@
               </article>
             </section>
           </div>
+            </div>
+          </div>
+          <aside class="menu-layout__visual" aria-label="Menu-kuvia">
+            <figure class="menu-layout__photo">
+              <img
+                src="images/menu-burger-side.png"
+                alt="Hampurilainen, ranskalaiset ja dipit tarjoiltuna."
+                width="1024"
+                height="1024"
+                loading="lazy"
+                decoding="async">
+            </figure>
+            <figure class="menu-layout__photo" aria-hidden="true">
+              <img
+                src="images/menu-burger-side.png"
+                alt=""
+                width="1024"
+                height="1024"
+                loading="lazy"
+                decoding="async">
+            </figure>
+          </aside>
         </div>
-        <figure class="menu-print menu-print--banner">
-          <img
-            src="images/menu-burger-side.png"
-            alt="Hampurilainen, ranskalaiset ja dipit tarjoiltuna."
-            width="1024"
-            height="1024"
-            loading="lazy"
-            decoding="async">
-        </figure>
       </section>
 
-      <section class="content-panel" aria-labelledby="h-yhteys">
+      <section class="content-panel content-panel--pelit home-reveal" aria-labelledby="h-pelit">
+        <div class="content-panel__title-row">
+          <h2 id="h-pelit">Pelit</h2>
+          <a href="#tilausruokailut" class="content-panel__jump">Tilausruokailut →</a>
+        </div>
+        <div class="activity-grid">
+          <div class="activity-column">
+            <figure class="activity-hero">
+              <img
+                src="images/pirkkola-biljardi-hero.png"
+                alt="Biljardihuone: pöytä, valaistus ja tunnelmallinen tila."
+                width="1024"
+                height="682"
+                loading="lazy"
+                decoding="async">
+            </figure>
+            <article class="activity-card activity-card--text-only" aria-label="Biljardi">
+              <p class="activity-card__meta"><strong>Biljardi</strong> <span>12 € / h</span></p>
+            </article>
+          </div>
+          <div class="activity-column">
+            <figure class="activity-hero">
+              <img
+                src="images/pirkkola-darts-hero.png"
+                alt="Tikkahuone: taulut, pöytä ja tunnelmallinen pubi."
+                width="1024"
+                height="682"
+                loading="lazy"
+                decoding="async">
+            </figure>
+            <article class="activity-card activity-card--text-only" aria-label="Darts">
+              <p class="activity-card__meta"><strong>Darts</strong> <span>8 € / h</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-panel home-reveal" aria-labelledby="h-yhteys">
         <h2 id="h-yhteys">Yhteystiedot</h2>
-        <p style="margin:0;"><strong>Osoite</strong><br>Pirkkolan metsätie 6<br>00630 Helsinki</p>
+        <p style="margin:0;">Uimahallin ravintola</p>
+        <p style="margin:0.65rem 0 0;"><strong>Osoite</strong><br>Pirkkolan metsätie 6<br>00630 Helsinki</p>
+        <p style="margin:1rem 0 0;">
+          <strong>Sähköposti:</strong>
+          <a href="mailto:janinsportcafe@hotmail.com">janinsportcafe@hotmail.com</a>
+        </p>
+        <p style="margin:0.65rem 0 0;">
+          <strong>Puhelin:</strong> Pasi Pellikka,
+          <a href="tel:+358406879606">040 687 9606</a>
+        </p>
         <p style="margin:1rem 0 0;">Tilausruokailut ja ryhmät: <a href="#tilausruokailut">katso tiedot alta</a> tai soita alla oleviin numeroihin.</p>
       </section>
 
-      <section class="tilaus-standout" id="tilausruokailut" aria-labelledby="h-tilaus">
+      <section class="tilaus-standout home-reveal" id="tilausruokailut" aria-labelledby="h-tilaus">
         <div class="tilaus-standout__shell">
           <header class="tilaus-standout__intro">
             <p class="tilaus-standout__kicker">Joukkueille &amp; ryhmille</p>
@@ -324,9 +376,10 @@
           <section class="content-panel content-panel--tilaus-inset content-panel--tilaus-cta" aria-labelledby="h-tilaus-varaa">
             <h2 id="h-tilaus-varaa">Varaa ruokailu</h2>
             <p style="margin:0;">
-              <strong>Puhelin:</strong>
+              <strong>Puhelin:</strong> Pasi Pellikka,
               <a href="tel:+358406879606">040 687 9606</a>
               tai
+              Jani Hyvönen,
               <a href="tel:+358447062000">044 706 2000</a>
             </p>
             <p style="margin:1rem 0 0;">

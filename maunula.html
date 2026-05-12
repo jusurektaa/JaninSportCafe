@@ -28,6 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/nav.js" defer></script>
+  <script src="js/home-reveal.js" defer></script>
 </head>
 <body class="page-branch page-maunula">
   <a class="skip-link" href="#main-content">Hyppää sisältöön</a>
@@ -51,15 +52,15 @@
         <div class="branch-visual-hero__bg"></div>
       </div>
 
-      <p class="back-row"><a href="index.html">← Etusivulle</a></p>
+      <p class="back-row home-reveal"><a class="back-row__link" href="index.html">Etusivulle</a></p>
 
-      <header class="branch-intro">
+      <header class="branch-intro home-reveal" style="--reveal-delay: 70ms">
         <h1 class="page-title" id="maunula-page-title">Janin Sport Bar &amp; Cafe — Maunula</h1>
         <p class="page-intro">Sporttibaaritunnelmaa: biljardi, darts, flipperi ja useita pöytäpelejä. Ruokalista: <a href="#menu">Menu</a>.</p>
       </header>
 
       <div class="branch-grid">
-        <section class="content-panel" aria-labelledby="h-aukio-m">
+        <section class="content-panel home-reveal" style="--reveal-delay: 0ms" aria-labelledby="h-aukio-m">
           <h2 id="h-aukio-m">Aukioloajat</h2>
           <ul class="hours-list">
             <li><strong>Ma</strong> <span>14.00–21.00</span></li>
@@ -70,7 +71,7 @@
           </ul>
         </section>
 
-        <section class="content-panel" aria-labelledby="h-pelit-m">
+        <section class="content-panel home-reveal" style="--reveal-delay: 90ms" aria-labelledby="h-pelit-m">
           <h2 id="h-pelit-m">Tarjonta</h2>
           <ul class="plain">
             <li>Biljardi</li>
@@ -87,7 +88,7 @@
         </section>
       </div>
 
-      <section class="menu-section" id="menu" aria-labelledby="menu-title-maunula">
+      <section class="menu-section home-reveal" id="menu" aria-labelledby="menu-title-maunula">
         <h2 id="menu-title-maunula" class="menu-title">Menu</h2>
         <p class="menu-intro">Maunulan listan annokset kirjoitettuna.</p>
         <div class="menu-grid">
@@ -241,7 +242,7 @@
         </figure>
       </section>
 
-      <section class="content-panel" aria-labelledby="h-yhteys-m">
+      <section class="content-panel home-reveal" aria-labelledby="h-yhteys-m">
         <h2 id="h-yhteys-m">Yhteystiedot</h2>
         <p style="margin:0;"><strong>Osoite</strong><br>Rajametsäntie 32<br>00630 Helsinki (Maunula)</p>
       </section>
