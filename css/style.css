@@ -623,6 +623,77 @@ main {
     url("../images/home-hero-bg-new.png") center / cover no-repeat;
 }
 
+/* Pirkkola & Maunula: kuvat vierekkäin, vaakakarusselli */
+.page-pirkkola .branch-visual-hero--gallery,
+.page-maunula .branch-visual-hero--gallery {
+  --branch-hero-slide: calc(100vw / 5);
+  height: auto;
+  overflow: hidden;
+  background: transparent;
+}
+
+.branch-visual-hero--gallery .branch-visual-hero__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.branch-visual-hero--gallery .branch-visual-hero__track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: max-content;
+  gap: 0;
+  animation: branch-hero-marquee 50s linear infinite;
+  will-change: transform;
+}
+
+.branch-visual-hero--gallery:hover .branch-visual-hero__track {
+  animation-play-state: paused;
+}
+
+@keyframes branch-hero-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.branch-visual-hero--gallery .branch-visual-hero__photo {
+  flex: 0 0 var(--branch-hero-slide);
+  width: var(--branch-hero-slide);
+  margin: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.branch-visual-hero--gallery .branch-visual-hero__photo img {
+  width: 100%;
+  height: clamp(11rem, 24vh, 17rem);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .branch-visual-hero--gallery .branch-visual-hero__track {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__photo[aria-hidden="true"] {
+    display: none;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__photo {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+}
+
 .branch-visual-hero .branch-visual-hero__bg::after {
   content: "";
   position: absolute;
@@ -1794,9 +1865,9 @@ main.home-main {
       rgba(18, 17, 15, 0.78) 48%,
       rgba(12, 11, 10, 0.88) 100%
     ),
-    url("../images/home-hero-bg-new.png");
+    url("../images/home-hero-ravintola.png");
   background-size: cover, cover;
-  background-position: center, center 42%;
+  background-position: center, center 38%;
   background-repeat: no-repeat;
 }
 
