@@ -626,7 +626,7 @@ main {
 /* Pirkkola & Maunula: kuvat vierekkäin, vaakakarusselli */
 .page-pirkkola .branch-visual-hero--gallery,
 .page-maunula .branch-visual-hero--gallery {
-  --branch-hero-slide: calc(100vw / 5);
+  --branch-hero-slide: calc(100vw / 7);
   height: auto;
   overflow: hidden;
   background: transparent;
@@ -689,8 +689,8 @@ main {
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__photo {
-    flex: 0 0 20%;
-    width: 20%;
+    flex: 0 0 calc(100% / 7);
+    width: calc(100% / 7);
   }
 }
 
@@ -777,7 +777,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   display: block;
 }
 

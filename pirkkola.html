@@ -35,13 +35,14 @@
   <div class="layout">
     <header class="site-header">
       <div class="site-header__inner">
-        <a class="brand" href="index.html">Janin Lounas &amp; Sport Cafe</a>
+        <a class="brand" href="index.html">Janin Lounas &amp; Sport Cafe — Pirkkola</a>
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Avaa valikko">
           <span class="nav-toggle__lines" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
         <nav id="primary-nav" class="nav nav--primary" aria-label="Päävalikko">
           <a href="pirkkola.html" aria-current="page">Pirkkola</a>
           <a href="maunula.html">Maunula</a>
+          <a href="#tilausruokailut">Tilausruokailut</a>
           <a href="yhteystiedot.html">Yhteystiedot</a>
         </nav>
       </div>
@@ -66,6 +67,12 @@
             <figure class="branch-visual-hero__photo">
               <img src="images/pirkkola-hero-juomat.png" alt="Juoma-annostimet buffetissa." width="800" height="500" loading="lazy" decoding="async">
             </figure>
+            <figure class="branch-visual-hero__photo">
+              <img src="images/branch-hero-juomaekaapit.png" alt="Juomakaapit: virvokkeet ja urheilujuomat." width="800" height="500" loading="lazy" decoding="async">
+            </figure>
+            <figure class="branch-visual-hero__photo">
+              <img src="images/branch-hero-leivonnaiset.png" alt="Tuoreet leivonnaiset ja makeiset näyteikkunassa." width="800" height="500" loading="lazy" decoding="async">
+            </figure>
             <figure class="branch-visual-hero__photo" aria-hidden="true">
               <img src="images/home-hero-ravintola.png" alt="" width="800" height="500" loading="lazy" decoding="async">
             </figure>
@@ -81,16 +88,17 @@
             <figure class="branch-visual-hero__photo" aria-hidden="true">
               <img src="images/pirkkola-hero-juomat.png" alt="" width="800" height="500" loading="lazy" decoding="async">
             </figure>
+            <figure class="branch-visual-hero__photo" aria-hidden="true">
+              <img src="images/branch-hero-juomaekaapit.png" alt="" width="800" height="500" loading="lazy" decoding="async">
+            </figure>
+            <figure class="branch-visual-hero__photo" aria-hidden="true">
+              <img src="images/branch-hero-leivonnaiset.png" alt="" width="800" height="500" loading="lazy" decoding="async">
+            </figure>
           </div>
         </div>
       </div>
 
       <p class="back-row home-reveal"><a class="back-row__link" href="index.html">Etusivulle</a></p>
-
-      <header class="branch-intro home-reveal" style="--reveal-delay: 70ms">
-        <h1 class="page-title">Janin Lounas &amp; Sport — Pirkkola</h1>
-        <p class="page-intro">Uimahallin ravintola. Buffet-lounas, keittiöstä tilattavat annokset sekä biljardi ja darts.</p>
-      </header>
 
       <div class="branch-grid">
         <div class="branch-stack">
@@ -121,15 +129,6 @@
         <div class="lounas-gallery" role="group" aria-label="Buffet-lounas kuvina">
           <figure class="lounas-gallery__item">
             <img
-              src="images/pirkkola-lounas-buffet-salaatti.png"
-              alt="Runsas salaattibuffet lounaspöydässä."
-              width="800"
-              height="450"
-              loading="lazy"
-              decoding="async">
-          </figure>
-          <figure class="lounas-gallery__item">
-            <img
               src="images/pirkkola-lounas-buffet-vaihtoehdot.png"
               alt="Lounaspöytä: yli 30 eri vaihtoehtoa."
               width="800"
@@ -141,6 +140,15 @@
             <img
               src="images/pirkkola-lounas-buffet-proteiinit.png"
               alt="Lounaspöytä: katkarapuja, savulohta, broileria ja hedelmiä."
+              width="800"
+              height="450"
+              loading="lazy"
+              decoding="async">
+          </figure>
+          <figure class="lounas-gallery__item lounas-gallery__item--salaatti">
+            <img
+              src="images/pirkkola-lounas-buffet-salaatti.png"
+              alt="Runsas salaattibuffet lounaspöydässä."
               width="800"
               height="450"
               loading="lazy"
@@ -178,14 +186,14 @@
               <div class="menu-column">
             <section aria-labelledby="menu-burgerit">
               <h3 id="menu-burgerit" class="menu-block__heading">Hampurilaisateriat</h3>
-              <p class="menu-block__note">Sisaltaa ranskalaiset, ketsupin ja talon majoneesin.</p>
+              <p class="menu-block__note">Sisältää ranskalaiset, ketsupin ja talon majoneesin.</p>
 
               <article class="menu-item">
                 <div class="menu-item__row">
                   <p class="menu-item__name">Lasten hampurilainen</p>
                   <div class="menu-item__tail"><span class="menu-item__price">12,90 €</span></div>
                 </div>
-                <p class="menu-item__desc">Mehukas 100 g naudan jauhelihapihvi, talon briossisampyla, cheddarjuusto, rapea salaatti, tomaatti, punasipuli ja talon majoneesi. Vahalaktoosinen.</p>
+                <p class="menu-item__desc">Mehukas 100 g naudan jauhelihapihvi, talon briossisämpylä, cheddarjuusto, rapea salaatti, tomaatti, punasipuli ja talon majoneesi. Vähälaktoosinen.</p>
               </article>
 
               <article class="menu-item">
@@ -193,7 +201,7 @@
                   <p class="menu-item__name">Talon hampurilainen</p>
                   <div class="menu-item__tail"><span class="menu-item__price">15,90 €</span></div>
                 </div>
-                <p class="menu-item__desc">Isompi 200 g naudan taylihvipihvi, talon briossisampyla, cheddarjuusto, rapea salaatti, tomaatti, punasipuli ja talon majoneesi. Vahalaktoosinen.</p>
+                <p class="menu-item__desc">Isompi 200 g naudan täyslihvipihvi, talon briossisämpylä, cheddarjuusto, rapea salaatti, tomaatti, punasipuli ja talon majoneesi. Vähälaktoosinen.</p>
               </article>
 
               <article class="menu-item">
@@ -201,7 +209,7 @@
                   <p class="menu-item__name">Tuhti hampurilainen</p>
                   <div class="menu-item__tail"><span class="menu-item__price">19,90 €</span></div>
                 </div>
-                <p class="menu-item__desc">Kaksi 200 g naudan taylihvipihvia, talon briossisampyla, cheddarjuusto, rapea salaatti, tomaatti, punasipuli ja talon majoneesi. Tuplasti tavaraa suureen nalkaan. Vahalaktoosinen.</p>
+                <p class="menu-item__desc">Kaksi 200 g naudan täyslihvipihviä, talon briossisämpylä, cheddarjuusto, rapea salaatti, tomaatti, punasipuli ja talon majoneesi. Tuplasti tavaraa suureen nälkään. Vähälaktoosinen.</p>
               </article>
             </section>
 
@@ -213,7 +221,7 @@
                   <p class="menu-item__name">Makkarakori</p>
                   <div class="menu-item__tail"><span class="menu-item__price">11,90 €</span></div>
                 </div>
-                <p class="menu-item__desc">Reilu maara makkaraa ja paljon rapeita ranskanperunoita. Laktoositon.</p>
+                <p class="menu-item__desc">Reilu määrä makkaraa ja paljon rapeita ranskanperunoita. Laktoositon.</p>
               </article>
 
               <article class="menu-item">
@@ -229,14 +237,14 @@
                   <p class="menu-item__name">Fish &amp; Chips</p>
                   <div class="menu-item__tail"><span class="menu-item__price">13,90 €</span></div>
                 </div>
-                <p class="menu-item__desc">Legendaarinen setti: iso, rapea kalapala ja reilusti ranskalaisia. Vahalaktoosinen.</p>
+                <p class="menu-item__desc">Legendaarinen setti: iso, rapea kalapala ja reilusti ranskalaisia. Vähälaktoosinen.</p>
               </article>
             </section>
           </div>
 
               <div class="menu-column">
             <section aria-labelledby="menu-pienta">
-              <h3 id="menu-pienta" class="menu-block__heading">Pienta purtavaa</h3>
+              <h3 id="menu-pienta" class="menu-block__heading">Pientä purtavaa</h3>
 
               <article class="menu-item">
                 <div class="menu-item__row">
@@ -262,7 +270,7 @@
                     <span class="menu-item__price">12 kpl 10,90 €</span>
                   </div>
                 </div>
-                <p class="menu-item__desc">Maukkaita tikkuja, joiden sisalla on sulavaa mozzarellajuustoa. Alkupalaksi tai sormiruoaksi.</p>
+                <p class="menu-item__desc">Maukkaita tikkuja, joiden sisällä on sulavaa mozzarellajuustoa. Alkupalaksi tai sormiruokaksi.</p>
               </article>
 
               <article class="menu-item">
