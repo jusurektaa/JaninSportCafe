@@ -695,14 +695,6 @@ main {
   box-shadow: none;
 }
 
-@media (max-width: 640px) {
-  .page-pirkkola .branch-hero-shell .back-row--hero-overlay,
-  .page-maunula .branch-hero-shell .back-row--hero-overlay {
-    left: max(0.75rem, env(safe-area-inset-left));
-    bottom: max(0.65rem, env(safe-area-inset-bottom, 0px));
-  }
-}
-
 @media (hover: hover) and (pointer: fine) {
   .page-pirkkola .branch-hero-shell .back-row--hero-overlay .back-row__link:hover,
   .page-maunula .branch-hero-shell .back-row--hero-overlay .back-row__link:hover,
@@ -875,69 +867,70 @@ main {
   }
 }
 
-@media (max-width: 29.99rem) {
+@media (max-width: 640px) {
+  .page-pirkkola .branch-hero-shell,
+  .page-maunula .branch-hero-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .page-pirkkola .branch-hero-shell .back-row--hero-overlay,
+  .page-maunula .branch-hero-shell .back-row--hero-overlay {
+    position: static;
+    order: 2;
+    width: 100%;
+    max-width: var(--panel-max);
+    margin-inline: auto;
+    padding: 0 max(0.75rem, env(safe-area-inset-right)) 0.15rem max(0.75rem, env(safe-area-inset-left));
+  }
+}
+
+@media (max-width: 47.99rem) {
   .page-pirkkola .branch-visual-hero--gallery,
   .page-maunula .branch-visual-hero--gallery {
-    --branch-hero-visible: 1.12;
-    --branch-hero-frame: 0.4rem;
-    --branch-hero-marquee-duration: 52s;
+    --branch-hero-visible: 1;
+    --branch-hero-frame: 0.15rem;
+    --branch-hero-marquee-duration: 56s;
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__viewport {
-    padding-block: 0.7rem 3.4rem;
+    padding-block: 0.45rem;
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__viewport::before,
   .branch-visual-hero--gallery .branch-visual-hero__viewport::after {
-    width: 1.35rem;
-  }
-
-  .branch-visual-hero--gallery .branch-visual-hero__photo img {
-    aspect-ratio: 16 / 10;
-    height: auto;
-    min-height: 10.5rem;
-    max-height: 13.5rem;
-    border-radius: 12px;
+    display: none;
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__photo::after {
-    border-radius: 12px;
+    border-radius: 10px;
+    background:
+      linear-gradient(180deg, rgba(255, 253, 248, 0.05) 0%, transparent 18%),
+      linear-gradient(0deg, rgba(8, 8, 7, 0.28) 0%, transparent 24%);
   }
 
+  .branch-visual-hero--gallery .branch-visual-hero__photo img {
+    width: 100%;
+    height: clamp(20rem, 115vw, 30rem);
+    max-height: none;
+    min-height: 0;
+    aspect-ratio: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+@media (max-width: 29.99rem) {
   .page-pirkkola .branch-hero-shell .back-row--hero-overlay .back-row__link,
   .page-maunula .branch-hero-shell .back-row--hero-overlay .back-row__link {
     padding: 0.62rem 1.1rem 0.62rem 0.95rem;
     font-size: 0.8125rem;
   }
-}
-
-@media (min-width: 30rem) and (max-width: 47.99rem) {
-  .page-pirkkola .branch-visual-hero--gallery,
-  .page-maunula .branch-visual-hero--gallery {
-    --branch-hero-visible: 1.55;
-    --branch-hero-frame: 0.4rem;
-    --branch-hero-marquee-duration: 58s;
-  }
-
-  .branch-visual-hero--gallery .branch-visual-hero__viewport {
-    padding-block: 0.75rem 3.5rem;
-  }
-
-  .branch-visual-hero--gallery .branch-visual-hero__viewport::before,
-  .branch-visual-hero--gallery .branch-visual-hero__viewport::after {
-    width: 1.75rem;
-  }
 
   .branch-visual-hero--gallery .branch-visual-hero__photo img {
-    aspect-ratio: 16 / 10;
-    height: auto;
-    min-height: 11rem;
-    max-height: 14.5rem;
-    border-radius: 12px;
-  }
-
-  .branch-visual-hero--gallery .branch-visual-hero__photo::after {
-    border-radius: 12px;
+    height: clamp(19rem, 120vw, 28rem);
   }
 }
 
@@ -992,12 +985,12 @@ main {
 
 @media (prefers-reduced-motion: reduce) and (max-width: 47.99rem) {
   .branch-visual-hero--gallery .branch-visual-hero__photo {
-    flex: 0 0 50%;
-    width: 50%;
+    flex: 0 0 100%;
+    width: 100%;
   }
 
-  .branch-visual-hero--gallery .branch-visual-hero__viewport {
-    padding-bottom: 3.5rem;
+  .branch-visual-hero--gallery .branch-visual-hero__photo img {
+    height: clamp(18rem, 92vw, 26rem);
   }
 }
 
