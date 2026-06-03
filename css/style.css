@@ -698,8 +698,8 @@ main {
 @media (max-width: 640px) {
   .page-pirkkola .branch-hero-shell .back-row--hero-overlay,
   .page-maunula .branch-hero-shell .back-row--hero-overlay {
-    left: max(0.85rem, env(safe-area-inset-left));
-    bottom: max(0.85rem, env(safe-area-inset-bottom, 0px));
+    left: max(0.75rem, env(safe-area-inset-left));
+    bottom: max(0.65rem, env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -730,8 +730,10 @@ main {
 /* Pirkkola & Maunula: kuvat vierekkäin, vaakakarusselli */
 .page-pirkkola .branch-visual-hero--gallery,
 .page-maunula .branch-visual-hero--gallery {
-  --branch-hero-slide: calc(100vw / 7);
+  --branch-hero-visible: 7;
+  --branch-hero-slide: calc(100vw / var(--branch-hero-visible));
   --branch-hero-frame: clamp(0.3rem, 0.55vw, 0.45rem);
+  --branch-hero-marquee-duration: 78s;
   position: relative;
   height: auto;
   overflow: hidden;
@@ -797,12 +799,14 @@ main {
   flex-wrap: nowrap;
   width: max-content;
   gap: 0;
-  animation: branch-hero-marquee 78s linear infinite;
+  animation: branch-hero-marquee var(--branch-hero-marquee-duration) linear infinite;
   will-change: transform;
 }
 
-.branch-visual-hero--gallery:hover .branch-visual-hero__track {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .branch-visual-hero--gallery:hover .branch-visual-hero__track {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes branch-hero-marquee {
@@ -855,18 +859,106 @@ main {
     box-shadow 0.7s ease;
 }
 
-.branch-visual-hero--gallery:hover .branch-visual-hero__photo img {
-  filter: saturate(0.88) contrast(1.02) brightness(0.94);
+@media (hover: hover) and (pointer: fine) {
+  .branch-visual-hero--gallery:hover .branch-visual-hero__photo img {
+    filter: saturate(0.88) contrast(1.02) brightness(0.94);
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__photo:hover img {
+    transform: scale(1.035);
+    filter: saturate(1) contrast(1.06) brightness(1);
+    box-shadow:
+      0 22px 52px rgba(0, 0, 0, 0.52),
+      0 8px 20px rgba(0, 0, 0, 0.32),
+      0 0 0 1px rgba(196, 163, 79, 0.28),
+      inset 0 1px 0 rgba(255, 253, 248, 0.12);
+  }
 }
 
-.branch-visual-hero--gallery .branch-visual-hero__photo:hover img {
-  transform: scale(1.035);
-  filter: saturate(1) contrast(1.06) brightness(1);
-  box-shadow:
-    0 22px 52px rgba(0, 0, 0, 0.52),
-    0 8px 20px rgba(0, 0, 0, 0.32),
-    0 0 0 1px rgba(196, 163, 79, 0.28),
-    inset 0 1px 0 rgba(255, 253, 248, 0.12);
+@media (max-width: 29.99rem) {
+  .page-pirkkola .branch-visual-hero--gallery,
+  .page-maunula .branch-visual-hero--gallery {
+    --branch-hero-visible: 1.12;
+    --branch-hero-frame: 0.4rem;
+    --branch-hero-marquee-duration: 52s;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__viewport {
+    padding-block: 0.7rem 3.4rem;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__viewport::before,
+  .branch-visual-hero--gallery .branch-visual-hero__viewport::after {
+    width: 1.35rem;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__photo img {
+    aspect-ratio: 16 / 10;
+    height: auto;
+    min-height: 10.5rem;
+    max-height: 13.5rem;
+    border-radius: 12px;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__photo::after {
+    border-radius: 12px;
+  }
+
+  .page-pirkkola .branch-hero-shell .back-row--hero-overlay .back-row__link,
+  .page-maunula .branch-hero-shell .back-row--hero-overlay .back-row__link {
+    padding: 0.62rem 1.1rem 0.62rem 0.95rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 30rem) and (max-width: 47.99rem) {
+  .page-pirkkola .branch-visual-hero--gallery,
+  .page-maunula .branch-visual-hero--gallery {
+    --branch-hero-visible: 1.55;
+    --branch-hero-frame: 0.4rem;
+    --branch-hero-marquee-duration: 58s;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__viewport {
+    padding-block: 0.75rem 3.5rem;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__viewport::before,
+  .branch-visual-hero--gallery .branch-visual-hero__viewport::after {
+    width: 1.75rem;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__photo img {
+    aspect-ratio: 16 / 10;
+    height: auto;
+    min-height: 11rem;
+    max-height: 14.5rem;
+    border-radius: 12px;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__photo::after {
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .page-pirkkola .branch-visual-hero--gallery,
+  .page-maunula .branch-visual-hero--gallery {
+    --branch-hero-visible: 3;
+    --branch-hero-marquee-duration: 68s;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__photo img {
+    height: clamp(12rem, 22vh, 16rem);
+  }
+}
+
+@media (min-width: 64rem) and (max-width: 87.99rem) {
+  .page-pirkkola .branch-visual-hero--gallery,
+  .page-maunula .branch-visual-hero--gallery {
+    --branch-hero-visible: 5;
+    --branch-hero-marquee-duration: 74s;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -882,16 +974,30 @@ main {
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__photo {
-    flex: 0 0 calc(100% / 7);
-    width: calc(100% / 7);
+    flex: 0 0 calc(100% / var(--branch-hero-visible, 7));
+    width: calc(100% / var(--branch-hero-visible, 7));
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__photo img {
     transition: none;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    max-height: 14rem;
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__photo:hover img {
     transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 47.99rem) {
+  .branch-visual-hero--gallery .branch-visual-hero__photo {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .branch-visual-hero--gallery .branch-visual-hero__viewport {
+    padding-bottom: 3.5rem;
   }
 }
 
