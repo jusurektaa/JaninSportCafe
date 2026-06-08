@@ -895,7 +895,7 @@ main {
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__viewport {
-    padding-block: 0.45rem;
+    padding-block: 0.35rem;
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__viewport::before,
@@ -912,7 +912,7 @@ main {
 
   .branch-visual-hero--gallery .branch-visual-hero__photo img {
     width: 100%;
-    height: clamp(20rem, 115vw, 30rem);
+    height: clamp(12.5rem, 52vw, 16rem);
     max-height: none;
     min-height: 0;
     aspect-ratio: auto;
@@ -930,7 +930,7 @@ main {
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__photo img {
-    height: clamp(19rem, 120vw, 28rem);
+    height: clamp(11.5rem, 48vw, 14.5rem);
   }
 }
 
@@ -990,7 +990,7 @@ main {
   }
 
   .branch-visual-hero--gallery .branch-visual-hero__photo img {
-    height: clamp(18rem, 92vw, 26rem);
+    height: clamp(11.5rem, 48vw, 15rem);
   }
 }
 
