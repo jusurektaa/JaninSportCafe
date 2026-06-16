@@ -1759,22 +1759,12 @@ main {
 
 .special-hours__card {
   margin: 0;
-  padding: 0;
+  padding: 1rem 1.15rem 1.15rem;
   border-radius: var(--radius);
-  overflow: hidden;
   border: 1px solid var(--box-border);
   background: var(--surface-2);
   box-shadow: var(--shadow);
-}
-
-.special-hours__card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.special-hours__card figcaption {
-  padding: 1rem 1.15rem 1.15rem;
+  border-left: 4px solid var(--gold-light);
 }
 
 .special-hours__card h3 {
